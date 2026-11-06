@@ -35,8 +35,9 @@ staticfiles/
 media/
 
 # Temporary / Extraction artifacts
-extracted/
-Arsha.zip
+# Template Source & Archives
+Fahari_Template_Source/
+*.zip
 check_*.py
 convert_*.py
 test_*.py

@@ -32,7 +32,7 @@ Templates are organized inside the application directory (`website/templates/`):
 
 ```
 STATIC/
-├── arsha_project/           # Django Configuration
+├── FahariDigital/           # Django Project Configuration
 │   ├── __init__.py
 │   ├── asgi.py
 │   ├── settings.py
@@ -41,10 +41,7 @@ STATIC/
 ├── website/                 # Django Application
 │   ├── migrations/
 │   │   └── 0001_initial.py
-│   ├── templates/           # App Templates
-│   │   ├── includes/
-│   │   │   ├── navbar.html
-│   │   │   └── footer.html
+│   ├── templates/           # App Templates (Flat layout)
 │   │   ├── 404.html
 │   │   ├── base.html
 │   │   ├── blog-details.html
@@ -63,6 +60,7 @@ STATIC/
 │   ├── img/
 │   ├── js/
 │   └── vendor/
+├── Fahari_Template_Source/  # Original HTML Template Assets
 ├── manage.py
 ├── requirements.txt
 ├── README.md

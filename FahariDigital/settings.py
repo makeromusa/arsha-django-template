@@ -40,7 +40,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'arsha_project.urls'
+ROOT_URLCONF = 'FahariDigital.urls'
 
 TEMPLATES = [
     {
@@ -60,7 +60,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'arsha_project.wsgi.application'
+WSGI_APPLICATION = 'FahariDigital.wsgi.application'
 
 
 # Database

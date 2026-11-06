@@ -1,5 +1,5 @@
 """
-URL configuration for arsha_project project.
+URL configuration for FahariDigital project.
 """
 from django.contrib import admin
 from django.urls import path, include
