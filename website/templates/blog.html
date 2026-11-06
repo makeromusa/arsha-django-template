@@ -1,0 +1,276 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog | Fahari Digital Solutions Nairobi{% endblock %}
+
+{% block body_class %}blog-page{% endblock %}
+
+{% block header_class %}sticky-top{% endblock %}
+
+{% block content %}
+<!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'website:home' %}">Home</a></li>
+            <li class="current">Blog</li>
+          </ol>
+        </nav>
+        <h1>Insights & Stories</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-8">
+
+          <!-- Blog Posts Section -->
+          <section id="blog-posts" class="blog-posts section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+              <div class="row gy-4">
+
+                <div class="col-lg-6">
+                  <article>
+
+                    <div class="post-img">
+                      <img src="{% static "img/blog/blog-post-1.webp" %}" alt="M-Pesa Daraja API Integration" class="img-fluid">
+                    </div>
+
+                    <h2 class="title">
+                      <a href="{% url 'website:blog_details' %}">Mastering M-Pesa Daraja 2.0 API with Django in Kenya</a>
+                    </h2>
+
+                    <div class="meta-top">
+                      <ul>
+                        <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{% url 'website:blog_details' %}">Asman Makero Musa</a></li>
+                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{% url 'website:blog_details' %}"><time datetime="2026-10-25">Oct 25, 2026</time></a></li>
+                        <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{% url 'website:blog_details' %}">18 Comments</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="content">
+                      <p>
+                        A comprehensive walkthrough on integrating Safaricom's Daraja B2C and C2B APIs seamlessly with Django REST framework for instant mobile transactions.
+                      </p>
+
+                      <div class="read-more">
+                        <a href="{% url 'website:blog_details' %}">Read More</a>
+                      </div>
+                    </div>
+
+                  </article>
+                </div><!-- End post list item -->
+
+                <div class="col-lg-6">
+
+                  <article>
+
+                    <div class="post-img">
+                      <img src="{% static "img/blog/blog-post-2.webp" %}" alt="Mobile First UX Kenya" class="img-fluid">
+                    </div>
+
+                    <h2 class="title">
+                      <a href="{% url 'website:blog_details' %}">Mobile-First UI/UX: Designing for Everyday Kenyan Users</a>
+                    </h2>
+
+                    <div class="meta-top">
+                      <ul>
+                        <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{% url 'website:blog_details' %}">Caldrin Daisy Omondi</a></li>
+                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{% url 'website:blog_details' %}"><time datetime="2026-11-01">Nov 1, 2026</time></a></li>
+                        <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{% url 'website:blog_details' %}">9 Comments</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="content">
+                      <p>
+                        How we design apps that load fast on 3G connections and respect user data usage across urban Nairobi and rural counties alike.
+                      </p>
+                      <div class="read-more">
+                        <a href="{% url 'website:blog_details' %}">Read More</a>
+                      </div>
+                    </div>
+
+                  </article>
+
+                </div><!-- End post list item -->
+
+                <div class="col-lg-6">
+
+                  <article>
+
+                    <div class="post-img">
+                      <img src="{% static "img/blog/blog-post-3.webp" %}" alt="SME Digital Growth" class="img-fluid">
+                    </div>
+
+                    <h2 class="title">
+                      <a href="{% url 'website:blog_details' %}">Digital Marketing Playbook for Kenyan SMEs in 2026</a>
+                    </h2>
+
+                    <div class="meta-top">
+                      <ul>
+                        <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{% url 'website:blog_details' %}">Cynthia Mukami Murithi</a></li>
+                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{% url 'website:blog_details' %}"><time datetime="2026-11-03">Nov 3, 2026</time></a></li>
+                        <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{% url 'website:blog_details' %}">14 Comments</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="content">
+                      <p>
+                        From TikTok algorithms to WhatsApp Business catalogues, discover the most effective growth strategies for local businesses.
+                      </p>
+                      <div class="read-more">
+                        <a href="{% url 'website:blog_details' %}">Read More</a>
+                      </div>
+                    </div>
+
+                  </article>
+
+                </div><!-- End post list item -->
+
+                <div class="col-lg-6">
+
+                  <article>
+
+                    <div class="post-img">
+                      <img src="{% static "img/blog/blog-post-4.webp" %}" alt="Scalable Cloud Systems" class="img-fluid">
+                    </div>
+
+                    <h2 class="title">
+                      <a href="{% url 'website:blog_details' %}">Building High-Availability APIs on Cloud Infrastructure</a>
+                    </h2>
+
+                    <div class="meta-top">
+                      <ul>
+                        <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{% url 'website:blog_details' %}">Druzler Chepngeno</a></li>
+                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{% url 'website:blog_details' %}"><time datetime="2026-11-05">Nov 5, 2026</time></a></li>
+                        <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{% url 'website:blog_details' %}">11 Comments</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="content">
+                      <p>
+                        Architectural patterns for zero-downtime deployments and database replication that can withstand peak shopping hours and traffic surges.
+                      </p>
+                      <div class="read-more">
+                        <a href="{% url 'website:blog_details' %}">Read More</a>
+                      </div>
+                    </div>
+
+                  </article>
+
+                </div><!-- End post list item -->
+
+              </div><!-- End blog posts list -->
+
+            </div>
+
+          </section><!-- /Blog Posts Section -->
+
+          <!-- Pagination 2 Section -->
+          <section id="pagination-2" class="pagination-2 section">
+
+            <div class="container">
+              <div class="d-flex justify-content-center">
+                <ul>
+                  <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
+                  <li><a href="#" class="active">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </section><!-- /Pagination 2 Section -->
+
+        </div>
+
+        <div class="col-lg-4 sidebar">
+
+          <div class="widgets-container" data-aos="fade-up" data-aos-delay="200">
+
+            <!-- Search Widget -->
+            <div class="search-widget widget-item">
+
+              <h3 class="widget-title">Search Articles</h3>
+              <form action="">
+                <input type="text" placeholder="Keywords...">
+                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+              </form>
+
+            </div><!--/Search Widget -->
+
+            <!-- Recent Posts Widget -->
+            <div class="recent-posts-widget widget-item">
+
+              <h3 class="widget-title">Recent Posts</h3>
+
+              <div class="post-item">
+                <img src="{% static "img/blog/blog-post-square-1.webp" %}" alt="" class="flex-shrink-0">
+                <div>
+                  <h4><a href="{% url 'website:blog_details' %}">Why PostgreSQL + Django is East Africa's Favorite Stack</a></h4>
+                  <time datetime="2026-11-04">Nov 4, 2026</time>
+                </div>
+              </div><!-- End recent post item-->
+
+              <div class="post-item">
+                <img src="{% static "img/blog/blog-post-square-2.webp" %}" alt="" class="flex-shrink-0">
+                <div>
+                  <h4><a href="{% url 'website:blog_details' %}">Securing Customer Data in Kenyan Fintechs</a></h4>
+                  <time datetime="2026-10-28">Oct 28, 2026</time>
+                </div>
+              </div><!-- End recent post item-->
+
+              <div class="post-item">
+                <img src="{% static "img/blog/blog-post-square-3.webp" %}" alt="" class="flex-shrink-0">
+                <div>
+                  <h4><a href="{% url 'website:blog_details' %}">Operational Efficiency in Remote Tech Teams</a></h4>
+                  <time datetime="2026-10-18">Oct 18, 2026</time>
+                </div>
+              </div><!-- End recent post item-->
+
+            </div><!--/Recent Posts Widget -->
+
+            <!-- Categories Widget -->
+            <div class="categories-widget widget-item">
+
+              <h3 class="widget-title">Categories</h3>
+              <ul class="mt-3">
+                <li><a href="#">Fintech & M-Pesa <span>(14)</span></a></li>
+                <li><a href="#">Software Engineering <span>(21)</span></a></li>
+                <li><a href="#">UI/UX Design <span>(12)</span></a></li>
+                <li><a href="#">Digital Marketing <span>(16)</span></a></li>
+                <li><a href="#">Kenyan Tech Ecosystem <span>(9)</span></a></li>
+              </ul>
+
+            </div><!--/Categories Widget -->
+
+            <!-- Tags Widget -->
+            <div class="tags-widget widget-item">
+
+              <h3 class="widget-title">Tags</h3>
+              <ul>
+                <li><a href="#">Django</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">M-Pesa</a></li>
+                <li><a href="#">Nairobi</a></li>
+                <li><a href="#">Flutter</a></li>
+                <li><a href="#">Cloud</a></li>
+                <li><a href="#">Fintech</a></li>
+                <li><a href="#">UI/UX</a></li>
+                <li><a href="#">Kenya</a></li>
+              </ul>
+
+            </div><!--/Tags Widget -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+{% endblock %}

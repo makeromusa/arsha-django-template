@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Portfolio Details - Arsha Bootstrap Template{% endblock %}
+{% block title %}PesaSmart App Case Study | Fahari Digital{% endblock %}
 
 {% block body_class %}portfolio-details-page{% endblock %}
 
@@ -14,10 +14,11 @@
         <nav class="breadcrumbs">
           <ol>
             <li><a href="{% url 'website:home' %}">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="{% url 'website:home' %}#portfolio">Portfolio</a></li>
+            <li class="current">PesaSmart App</li>
           </ol>
         </nav>
-        <h1>Portfolio Details</h1>
+        <h1>Case Study: PesaSmart App</h1>
       </div>
     </div><!-- End Page Title -->
 
@@ -50,19 +51,19 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="{% static "img/portfolio/portfolio-1.webp" %}" alt="">
+                  <img src="{% static "img/portfolio/portfolio-1.webp" %}" alt="PesaSmart Interface">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="{% static "img/portfolio/portfolio-10.webp" %}" alt="">
+                  <img src="{% static "img/portfolio/portfolio-10.webp" %}" alt="Analytics Dashboard">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="{% static "img/portfolio/portfolio-7.webp" %}" alt="">
+                  <img src="{% static "img/portfolio/portfolio-7.webp" %}" alt="Mobile Integration">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="{% static "img/portfolio/portfolio-4.webp" %}" alt="">
+                  <img src="{% static "img/portfolio/portfolio-4.webp" %}" alt="Financial Insights">
                 </div>
 
               </div>
@@ -72,18 +73,21 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
+              <h3>Project Information</h3>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                <li><strong>Category</strong>: Mobile App &amp; Fintech</li>
+                <li><strong>Client</strong>: PesaSmart Kenya Ltd</li>
+                <li><strong>Project Date</strong>: August 2026</li>
+                <li><strong>Tech Stack</strong>: Django REST, Flutter, PostgreSQL</li>
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Exercitationem repudiandae officiis neque suscipit</h2>
+              <h2>Empowering Financial Literacy in Nairobi</h2>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                PesaSmart approached Fahari Digital to develop an automated expense tracker designed specifically for Kenyans. By automatically categorizing M-Pesa SMS alerts and providing real-time monthly budget charts, the app achieved over 45,000 active monthly users within 90 days of launch.
+              </p>
+              <p>
+                Engineered with end-to-end encryption and biometric authentication, PesaSmart represents the highest tier of Kenyan financial software engineering.
               </p>
             </div>
           </div>

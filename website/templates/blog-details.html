@@ -1,0 +1,358 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Mastering M-Pesa Daraja 2.0 API with Django | Fahari Digital{% endblock %}
+
+{% block body_class %}blog-details-page{% endblock %}
+
+{% block header_class %}sticky-top{% endblock %}
+
+{% block content %}
+<!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'website:home' %}">Home</a></li>
+            <li><a href="{% url 'website:blog' %}">Blog</a></li>
+            <li class="current">Blog Details</li>
+          </ol>
+        </nav>
+        <h1>Article Details</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-8">
+
+          <!-- Blog Details Section -->
+          <section id="blog-details" class="blog-details section">
+            <div class="container" data-aos="fade-up">
+
+              <article class="article">
+
+                <div class="hero-img" data-aos="zoom-in">
+                  <img src="{% static "img/blog/blog-post-3.webp" %}" alt="M-Pesa Daraja API Integration" class="img-fluid" loading="lazy">
+                  <div class="meta-overlay">
+                    <div class="meta-categories">
+                      <a href="#" class="category">Fintech &amp; Web Development</a>
+                      <span class="divider">•</span>
+                      <span class="reading-time"><i class="bi bi-clock"></i> 5 min read</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="article-content" data-aos="fade-up" data-aos-delay="100">
+                  <div class="content-header">
+                    <h1 class="title">Mastering M-Pesa Daraja 2.0 API with Django in Kenya</h1>
+
+                    <div class="author-info">
+                      <div class="author-details">
+                        <img src="{% static "img/person/person-m-7.webp" %}" alt="Asman Makero Musa" class="author-img">
+                        <div class="info">
+                          <h4>Asman Makero Musa</h4>
+                          <span class="role">Founder &amp; CEO, Fahari Digital</span>
+                        </div>
+                      </div>
+                      <div class="post-meta">
+                        <span class="date"><i class="bi bi-calendar3"></i> Oct 25, 2026</span>
+                        <span class="divider">•</span>
+                        <span class="comments"><i class="bi bi-chat-text"></i> 18 Comments</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="content">
+                    <p class="lead">
+                      Integrating mobile money into your application is essential for doing business in Kenya. Over 90% of online consumer transactions in Nairobi and across the country happen through Safaricom M-Pesa.
+                    </p>
+
+                    <p>
+                      At Fahari Digital, we build high-volume fintech and e-commerce platforms using Python and Django. In this guide, we break down the architectural steps required to integrate Safaricom's Daraja 2.0 STK Push (Lipa na M-Pesa Online) with asynchronous callback handling.
+                    </p>
+
+                    <div class="content-image right-aligned">
+                      <img src="{% static "img/blog/blog-hero-2.webp" %}" class="img-fluid" alt="Nairobi Developer Workspace" loading="lazy">
+                      <figcaption>Engineered with precision at our Nairobi innovation lab</figcaption>
+                    </div>
+
+                    <h2>1. Generating OAuth Tokens Securely</h2>
+                    <p>
+                      Safaricom requires OAuth 1.0/2.0 authentication before sending any transaction request. Best practices include caching tokens in Redis or Django memory cache to prevent redundant auth calls:
+                    </p>
+                    <ul>
+                      <li>Store Consumer Key and Secret in environment variables (never in git)</li>
+                      <li>Cache access tokens with a 50-minute TTL (tokens expire in 3599 seconds)</li>
+                      <li>Handle auto-renewal on 401 response codes gracefully</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                      <h3>Core Best Practices</h3>
+                      <ul class="trend-list">
+                        <li>
+                          <i class="bi bi-lightning-charge"></i>
+                          <span>Asynchronous Celery tasks for handling incoming webhook callbacks</span>
+                        </li>
+                        <li>
+                          <i class="bi bi-shield-check"></i>
+                          <span>IP whitelisting for Safaricom gateway callback endpoints</span>
+                        </li>
+                        <li>
+                          <i class="bi bi-phone"></i>
+                          <span>Automatic fallback to SMS verification for slow networks</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <h2>2. Handling Real-Time STK Callbacks</h2>
+                    <p>
+                      The biggest pitfall for Kenyan developers is synchronous callback processing. Safaricom expects a 200 OK within 5 seconds. Save the payload immediately, respond with 200, and process the fulfillment logic in a background worker.
+                    </p>
+
+                    <blockquote>
+                      <p>
+                        "Building technology in Kenya taught us that reliability under real-world network conditions is the true benchmark of good engineering."
+                      </p>
+                      <cite>Asman Makero Musa, Fahari Digital Nairobi</cite>
+                    </blockquote>
+
+                    <h2>Conclusion</h2>
+                    <p>
+                      With proper error handling, idempotency keys, and transaction reconciliation, your Django app will provide instantaneous, rock-solid checkout experiences for millions of Kenyan consumers.
+                    </p>
+                  </div>
+
+                  <div class="meta-bottom">
+                    <div class="tags-section">
+                      <h4>Related Topics</h4>
+                      <div class="tags">
+                        <a href="#" class="tag">Django</a>
+                        <a href="#" class="tag">M-Pesa</a>
+                        <a href="#" class="tag">Fintech Kenya</a>
+                        <a href="#" class="tag">Python</a>
+                        <a href="#" class="tag">API Integration</a>
+                      </div>
+                    </div>
+
+                    <div class="share-section">
+                      <h4>Share Article</h4>
+                      <div class="social-links">
+                        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="copy-link" title="Copy Link"><i class="bi bi-link-45deg"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </article>
+
+            </div>
+          </section><!-- /Blog Details Section -->
+
+          <!-- Blog Comments Section -->
+          <section id="blog-comments" class="blog-comments section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+              <div class="blog-comments-4">
+                <div class="comments-header">
+                  <h3 class="title">Community Discussion</h3>
+                  <div class="comments-stats">
+                    <span class="count">3</span>
+                    <span class="label">Comments</span>
+                  </div>
+                </div>
+
+                <div class="comments-container">
+                  <!-- Comment #1 -->
+                  <div class="comment-thread">
+                    <div class="comment-box">
+                      <div class="comment-wrapper">
+                        <div class="avatar-wrapper">
+                          <img src="{% static "img/person/person-f-8.webp" %}" alt="Marylyne Mwazighe" loading="lazy">
+                          <span class="status-indicator"></span>
+                        </div>
+
+                        <div class="comment-content">
+                          <div class="comment-header">
+                            <div class="user-info">
+                              <h4>Marylyne Mwazighe</h4>
+                              <span class="time-badge">
+                                <i class="bi bi-clock"></i>
+                                2 hours ago
+                              </span>
+                            </div>
+                            <div class="engagement">
+                              <span class="likes">
+                                <i class="bi bi-heart"></i>
+                                12
+                              </span>
+                            </div>
+                          </div>
+
+                          <div class="comment-body">
+                            <p>Great breakdown Asman! Redis caching for the Daraja access token saved our production apps significant latency during holiday sales.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Replies Container -->
+                    <div class="replies-container">
+                      <div class="comment-box reply">
+                        <div class="comment-wrapper">
+                          <div class="avatar-wrapper">
+                            <img src="{% static "img/person/person-f-7.webp" %}" alt="Druzler Chepngeno" loading="lazy">
+                            <span class="status-indicator"></span>
+                          </div>
+
+                          <div class="comment-content">
+                            <div class="comment-header">
+                              <div class="user-info">
+                                <h4>Druzler Chepngeno</h4>
+                                <span class="time-badge">
+                                  <i class="bi bi-clock"></i>
+                                  1 hour ago
+                                </span>
+                              </div>
+                            </div>
+
+                            <div class="comment-body">
+                              <p>Agreed Marylyne. Adding Celery for background callback processing eliminates any timeout issues with Safaricom gateway.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Comment #2 -->
+                  <div class="comment-thread">
+                    <div class="comment-box">
+                      <div class="comment-wrapper">
+                        <div class="avatar-wrapper">
+                          <img src="{% static "img/person/person-m-12.webp" %}" alt="Kevin Kiprop" loading="lazy">
+                          <span class="status-indicator"></span>
+                        </div>
+
+                        <div class="comment-content">
+                          <div class="comment-header">
+                            <div class="user-info">
+                              <h4>Kevin Kiprop</h4>
+                              <span class="time-badge">
+                                <i class="bi bi-clock"></i>
+                                3 hours ago
+                              </span>
+                            </div>
+                          </div>
+
+                          <div class="comment-body">
+                            <p>Very practical guide for developers in Nairobi. Would love a follow up on B2C payouts integration!</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </section><!-- /Blog Comments Section -->
+
+          <!-- Blog Comment Form Section -->
+          <section id="blog-comment-form" class="blog-comment-form section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+              <form method="post" role="form">
+                {% csrf_token %}
+                <div class="form-header">
+                  <h3>Join the Conversation</h3>
+                  <p>Your email will remain private. Required fields are marked *</p>
+                </div>
+
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <label for="name">Full Name *</label>
+                      <input type="text" name="name" id="name" placeholder="Your name" required="">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <label for="email">Email Address *</label>
+                      <input type="email" name="email" id="email" placeholder="Your email address" required="">
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="input-group">
+                      <label for="comment">Your Comment *</label>
+                      <textarea name="comment" id="comment" rows="5" placeholder="Share your experience or question..." required=""></textarea>
+                    </div>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary px-4 py-2">Submit Comment</button>
+                  </div>
+                </div>
+
+              </form>
+
+            </div>
+
+          </section><!-- /Blog Comment Form Section -->
+
+        </div>
+
+        <div class="col-lg-4 sidebar">
+
+          <div class="widgets-container" data-aos="fade-up" data-aos-delay="200">
+
+            <!-- Search Widget -->
+            <div class="search-widget widget-item">
+              <h3 class="widget-title">Search</h3>
+              <form action="">
+                <input type="text" placeholder="Search blog...">
+                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+              </form>
+            </div>
+
+            <!-- Categories Widget -->
+            <div class="categories-widget widget-item">
+              <h3 class="widget-title">Categories</h3>
+              <ul class="mt-3">
+                <li><a href="#">Fintech &amp; M-Pesa <span>(14)</span></a></li>
+                <li><a href="#">Web Development <span>(21)</span></a></li>
+                <li><a href="#">UI/UX Design <span>(12)</span></a></li>
+                <li><a href="#">Marketing <span>(16)</span></a></li>
+                <li><a href="#">Kenyan Tech <span>(9)</span></a></li>
+              </ul>
+            </div>
+
+            <!-- Tags Widget -->
+            <div class="tags-widget widget-item">
+              <h3 class="widget-title">Tags</h3>
+              <ul>
+                <li><a href="#">Django</a></li>
+                <li><a href="#">M-Pesa</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">Nairobi</a></li>
+                <li><a href="#">Fintech</a></li>
+                <li><a href="#">Cloud</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+{% endblock %}

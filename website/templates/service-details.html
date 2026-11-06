@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Custom Web &amp; App Development Services | Fahari Digital{% endblock %}
+
+{% block body_class %}service-details-page{% endblock %}
+
+{% block header_class %}sticky-top{% endblock %}
+
+{% block content %}
+<!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'website:home' %}">Home</a></li>
+            <li><a href="{% url 'website:home' %}#services">Services</a></li>
+            <li class="current">Service Details</li>
+          </ol>
+        </nav>
+        <h1>Web &amp; Software Engineering</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="services-list">
+              <a href="#" class="active">Web Development (Django &amp; React)</a>
+              <a href="#">Mobile Apps (Flutter &amp; React Native)</a>
+              <a href="#">Fintech &amp; M-Pesa Integration</a>
+              <a href="#">UI/UX Product Design</a>
+              <a href="#">Cloud &amp; DevOps Engineering</a>
+            </div>
+
+            <h4>Transform Your Digital Presence</h4>
+            <p>At Fahari Digital, we build bespoke web applications that streamline business operations, elevate customer satisfaction, and drive exponential revenue across Kenya and East Africa.</p>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static "img/services/services-4.webp" %}" alt="Software Engineering by Fahari Digital" class="img-fluid services-img">
+            <h3>Enterprise-Grade Web &amp; Mobile Software Built in Nairobi</h3>
+            <p>
+              Whether you are an established corporation migrating legacy software or an ambitious Kenyan startup seeking to capture market share, Fahari Digital delivers software engineered for reliability, security, and exceptional performance.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Custom Django, Python, and modern JavaScript architectures tailored to your workflow.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Complete integration with Safaricom M-Pesa Daraja, bank gateways, and SMS APIs.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Mobile-responsive, lightning-fast interfaces tested on all Kenyan network bandwidths.</span></li>
+            </ul>
+            <p>
+              We follow rigorous test-driven development practices and maintain comprehensive documentation so your team can maintain and expand the codebase effortlessly.
+            </p>
+            <p>
+              From initial technical scoping to cloud deployment on AWS or Google Cloud, Fahari Digital stands alongside your business as a dedicated technology partner. Reach out today to schedule an architectural consultation with our engineering team.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Service Details Section -->
+{% endblock %}

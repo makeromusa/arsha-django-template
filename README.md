@@ -1,66 +1,74 @@
-# Arsha - Django Corporate Web Application
+# Fahari Digital Solutions — Nairobi, Kenya
 
-A full-stack Django application converted from the modern **Arsha** Bootstrap template by [BootstrapMade](https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/).
+A full-stack, production-grade Django web application crafted for **Fahari Digital Solutions**, Nairobi's premier digital engineering and software agency. 
 
-This project demonstrates clean Django / Jinja templating practices, modular component organization, static files configuration, and backend models for inquiry and newsletter handling.
-
----
-
-## 🌟 Recommended BootstrapMade Template
-
-**Template Name:** [Arsha - Free Corporate Bootstrap HTML Template](https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/)
-
-### Why Arsha is the Best Template to Work With:
-1. **Modern Stack:** Built on Bootstrap 5.3 with clean vanilla JavaScript (no jQuery dependency), AOS animations, GLightbox, and Swiper.
-2. **Complete Page Suite:** Includes not only the one-page corporate landing page, but also multi-page templates:
-   - Homepage (`index.html`)
-   - Starter Template (`starter-page.html`)
-   - Service Details (`service-details.html`)
-   - Portfolio Details (`portfolio-details.html`)
-   - Blog Listing (`blog.html`)
-   - Blog Article Detail (`blog-details.html`)
-   - Custom 404 Error Page (`404.html`)
-3. **Clean Architecture:** Well-organized CSS, modern typography (Jost, Open Sans, Poppins), and responsive layouts that convert cleanly into Django's template inheritance system.
+Converted and heavily customized from BootstrapMade to feature 100% authentic Kenyan content, team leadership, localized pricing (KSh), M-Pesa integration architecture, and modern Jinja/Django template inheritance.
 
 ---
 
-## 📁 Project Architecture
+## 🇰🇪 Business Identity & Creative Kenyan Brand
+
+- **Name:** **Fahari Digital Solutions** (*"Fahari"* — Swahili for Pride, Prestige, and Excellence)
+- **Tagline:** Digital Solutions Built for Africa's Future
+- **Headquarters:** Westlands Business Park, Waiyaki Way, Nairobi, Kenya
+- **Contact:** `+254 700 123 456` | `hello@faharidigital.co.ke`
+
+---
+
+## 👥 Executive Leadership & Team
+
+| Name | Role | Focus Area |
+|---|---|---|
+| **Asman Makero Musa** | **Founder & Chief Executive Officer (CEO)** | Vision, Strategy, and Technical Architecture |
+| **Marylyne Mwazighe** | **Chief Operations Officer (COO)** | Client Operations, Delivery, and Agile Project Management |
+| **Caldrin Daisy Omondi** | **Lead UI/UX & Product Designer** | User Experience, Design Systems, and Mobile-First Prototyping |
+| **Cynthia Mukami Murithi** | **Head of Digital Marketing** | Growth Marketing, SEO, Social Strategy, and Brand Visibility |
+| **Druzler Chepngeno** | **Senior Backend Engineer** | APIs, Cloud Infrastructure, Database Design, and M-Pesa Gateways |
+
+---
+
+## 📁 Project Structure (App-Centric Templates)
+
+Organized following standard Django best practices (templates inside the application directory, identical to VS Code project layout):
 
 ```
 STATIC/
-├── arsha_project/           # Django project root
+├── arsha_project/           # Django Project Config
 │   ├── __init__.py
 │   ├── asgi.py
-│   ├── settings.py          # Static files & template settings configured
-│   ├── urls.py              # Root URL routing + custom 404 handler
+│   ├── settings.py          # Static files & template settings
+│   ├── urls.py              # Root URL routing + 404 handler
 │   └── wsgi.py
-├── website/                 # Dedicated Django app
+├── website/                 # Core Django App
 │   ├── migrations/
-│   ├── admin.py             # Admin models for Contact and Newsletter
+│   │   └── 0001_initial.py
+│   ├── templates/           # App Templates Folder
+│   │   ├── includes/
+│   │   │   ├── navbar.html  # Modular navigation with active link logic
+│   │   │   └── footer.html  # Clean footer (no third-party branding)
+│   │   ├── 404.html         # Custom styled 404 error page
+│   │   ├── base.html        # Master Jinja/Django base template
+│   │   ├── blog-details.html# M-Pesa Daraja guide by Asman Makero Musa
+│   │   ├── blog.html        # Tech articles & insights
+│   │   ├── index.html       # Fahari Digital landing page
+│   │   ├── portfolio-details.html # PesaSmart case study
+│   │   ├── service-details.html   # Web & mobile dev services
+│   │   └── starter-page.html      # Boilerplate for new pages
+│   ├── admin.py             # Admin panel for inquiries & subscribers
 │   ├── apps.py
-│   ├── models.py            # ContactMessage & NewsletterSubscriber models
-│   ├── urls.py              # App routing
-│   └── views.py             # View controllers (Home, Blog, Services, etc.)
+│   ├── models.py            # ContactMessage & NewsletterSubscriber
+│   ├── urls.py              # App URLs namespace
+│   └── views.py             # View controllers
 ├── static/                  # Static assets (CSS, JS, Images, Vendors)
 │   ├── css/
-│   ├── img/
+│   │   └── main.css
+│   ├── img/                 # Images & icons
 │   ├── js/
-│   ├── scss/
-│   └── vendor/
-├── templates/               # Django / Jinja templates
-│   ├── base.html            # Master base template with blocks
-│   ├── index.html           # Extends base.html
-│   ├── starter-page.html    # Extends base.html
-│   ├── service-details.html # Extends base.html
-│   ├── portfolio-details.html
-│   ├── blog.html
-│   ├── blog-details.html
-│   ├── 404.html
-│   └── includes/
-│       ├── navbar.html      # Modular navigation component
-│       └── footer.html      # Modular footer component with newsletter
+│   │   └── main.js
+│   └── vendor/              # Bootstrap, Swiper, GLightbox, AOS
 ├── manage.py
 ├── requirements.txt
+├── README.md
 └── .gitignore
 ```
 
@@ -74,14 +82,12 @@ git clone https://github.com/makeromusa/arsha-django-template.git
 cd arsha-django-template
 ```
 
-### 2. Create and Activate Virtual Environment
-```bash
+### 2. Activate Virtual Environment
+```powershell
 # Windows
-python -m venv .venv
-.venv\Scripts\activate
+.venv\Scripts\Activate.ps1
 
-# macOS / Linux
-python3 -m venv .venv
+# Linux / macOS
 source .venv/bin/activate
 ```
 
@@ -90,68 +96,19 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Run Migrations
+### 4. Run Migrations & Start Server
 ```bash
 python manage.py migrate
-```
-
-### 5. Create a Superuser (Optional, for Admin Panel)
-```bash
-python manage.py createsuperuser
-```
-
-### 6. Start the Development Server
-```bash
 python manage.py runserver
 ```
 
-Open your browser and navigate to:
-```
-http://127.0.0.1:8000/
-```
+Visit **http://127.0.0.1:8000/** in your browser.
 
 ---
 
-## 🧩 Template Inheritance & Jinja/Django Features
-
-All views extend `templates/base.html`:
-```html
-{% extends 'base.html' %}
-{% load static %}
-
-{% block title %}Arsha - Modern Corporate Bootstrap Template{% endblock %}
-{% block body_class %}index-page{% endblock %}
-
-{% block content %}
-<!-- Page-specific sections -->
-{% endblock %}
-```
-
-### Modular Components
-- **Navbar:** Extracted into `templates/includes/navbar.html` and included with `{% include 'includes/navbar.html' %}`. Supports dynamic active states based on current route.
-- **Footer:** Extracted into `templates/includes/footer.html` with working newsletter subscription form protected by `{% csrf_token %}`.
-
----
-
-## 📄 Available Routes
-
-| Route | Description |
-|---|---|
-| `/` | Landing page (Hero, About, Services, Portfolio, Pricing, Contact) |
-| `/starter/` | Clean boilerplate starter page |
-| `/services/details/` | Service details page |
-| `/portfolio/details/` | Portfolio project showcase details |
-| `/blog/` | Blog article archive |
-| `/blog/details/` | Blog single post view |
-| `/contact/` | Contact message submission endpoint (AJAX-ready) |
-| `/newsletter/` | Newsletter subscription endpoint (AJAX-ready) |
-| `/404/` | Custom styled 404 page |
-| `/admin/` | Django Administration panel |
-
----
-
-## ⚖️ Credits & License
-
-- Original HTML Template: [Arsha by BootstrapMade](https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/)
-- License: BootstrapMade Free License (attribution required)
-- Django Conversion: Built for seamless deployment and extensibility.
+## 🛠️ Customizations Done
+- **Zero Placeholder / Latin Text:** Every single instance of *Lorem Ipsum* replaced with realistic Kenyan tech agency copy.
+- **Removed Third-Party Branding:** All *“Designed by BootstrapMade”* and third-party markers removed.
+- **Localized Content:** Pricing in Kenya Shillings (KSh), addresses in Westlands, Nairobi, Kenyan phone format (`+254`), and Daraja M-Pesa case studies.
+- **Jinja / Django Templating:** Master `base.html` inheritance, modular `includes/navbar.html` and `includes/footer.html`, CSRF tokens, and dynamic routing.
+- **Database Models:** Fully functional models for `ContactMessage` and `NewsletterSubscriber` with Django Admin integration.
