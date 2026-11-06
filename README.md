@@ -1,71 +1,68 @@
-# Fahari Digital Solutions — Nairobi, Kenya
+# Fahari Digital Solutions (Nairobi, Kenya)
 
-A full-stack, production-grade Django web application crafted for **Fahari Digital Solutions**, Nairobi's premier digital engineering and software agency. 
-
-Converted and heavily customized from BootstrapMade to feature 100% authentic Kenyan content, team leadership, localized pricing (KSh), M-Pesa integration architecture, and modern Jinja/Django template inheritance.
+A full-stack Django web application built for **Fahari Digital Solutions**, a software development agency in Nairobi, Kenya.
 
 ---
 
-## 🇰🇪 Business Identity & Creative Kenyan Brand
+## Business Information
 
-- **Name:** **Fahari Digital Solutions** (*"Fahari"* — Swahili for Pride, Prestige, and Excellence)
-- **Tagline:** Digital Solutions Built for Africa's Future
-- **Headquarters:** Westlands Business Park, Waiyaki Way, Nairobi, Kenya
-- **Contact:** `+254 700 123 456` | `hello@faharidigital.co.ke`
+- **Company Name:** Fahari Digital Solutions
+- **Meaning:** "Fahari" is Swahili for Pride and Excellence
+- **Location:** Westlands Business Park, Waiyaki Way, Nairobi, Kenya
+- **Phone:** +254 700 123 456
+- **Email:** hello@faharidigital.co.ke
 
 ---
 
-## 👥 Executive Leadership & Team
+## Executive Leadership
 
-| Name | Role | Focus Area |
+| Name | Role | Responsibilities |
 |---|---|---|
-| **Asman Makero Musa** | **Founder & Chief Executive Officer (CEO)** | Vision, Strategy, and Technical Architecture |
-| **Marylyne Mwazighe** | **Chief Operations Officer (COO)** | Client Operations, Delivery, and Agile Project Management |
-| **Caldrin Daisy Omondi** | **Lead UI/UX & Product Designer** | User Experience, Design Systems, and Mobile-First Prototyping |
-| **Cynthia Mukami Murithi** | **Head of Digital Marketing** | Growth Marketing, SEO, Social Strategy, and Brand Visibility |
-| **Druzler Chepngeno** | **Senior Backend Engineer** | APIs, Cloud Infrastructure, Database Design, and M-Pesa Gateways |
+| **Asman Makero Musa** | **Founder & Chief Executive Officer (CEO)** | Project Architecture and Technical Direction |
+| **Marylyne Mwazighe** | **Chief Operations Officer (COO)** | Client Operations and Project Schedules |
+| **Caldrin Daisy Omondi** | **Lead UI/UX Designer** | Mobile and Web Interface Design |
+| **Cynthia Mukami Murithi** | **Head of Digital Marketing** | Search Rankings and Online Advertising |
+| **Druzler Chepngeno** | **Senior Backend Engineer** | APIs, Database Design, and M-Pesa Gateways |
 
 ---
 
-## 📁 Project Structure (App-Centric Templates)
+## Project Structure
 
-Organized following standard Django best practices (templates inside the application directory, identical to VS Code project layout):
+Templates are organized inside the application directory (`website/templates/`):
 
 ```
 STATIC/
-├── arsha_project/           # Django Project Config
+├── arsha_project/           # Django Configuration
 │   ├── __init__.py
 │   ├── asgi.py
-│   ├── settings.py          # Static files & template settings
-│   ├── urls.py              # Root URL routing + 404 handler
+│   ├── settings.py
+│   ├── urls.py
 │   └── wsgi.py
-├── website/                 # Core Django App
+├── website/                 # Django Application
 │   ├── migrations/
 │   │   └── 0001_initial.py
-│   ├── templates/           # App Templates Folder
+│   ├── templates/           # App Templates
 │   │   ├── includes/
-│   │   │   ├── navbar.html  # Modular navigation with active link logic
-│   │   │   └── footer.html  # Clean footer (no third-party branding)
-│   │   ├── 404.html         # Custom styled 404 error page
-│   │   ├── base.html        # Master Jinja/Django base template
-│   │   ├── blog-details.html# M-Pesa Daraja guide by Asman Makero Musa
-│   │   ├── blog.html        # Tech articles & insights
-│   │   ├── index.html       # Fahari Digital landing page
-│   │   ├── portfolio-details.html # PesaSmart case study
-│   │   ├── service-details.html   # Web & mobile dev services
-│   │   └── starter-page.html      # Boilerplate for new pages
-│   ├── admin.py             # Admin panel for inquiries & subscribers
+│   │   │   ├── navbar.html
+│   │   │   └── footer.html
+│   │   ├── 404.html
+│   │   ├── base.html
+│   │   ├── blog-details.html
+│   │   ├── blog.html
+│   │   ├── index.html
+│   │   ├── portfolio-details.html
+│   │   ├── service-details.html
+│   │   └── starter-page.html
+│   ├── admin.py
 │   ├── apps.py
-│   ├── models.py            # ContactMessage & NewsletterSubscriber
-│   ├── urls.py              # App URLs namespace
-│   └── views.py             # View controllers
-├── static/                  # Static assets (CSS, JS, Images, Vendors)
+│   ├── models.py
+│   ├── urls.py
+│   └── views.py
+├── static/
 │   ├── css/
-│   │   └── main.css
-│   ├── img/                 # Images & icons
+│   ├── img/
 │   ├── js/
-│   │   └── main.js
-│   └── vendor/              # Bootstrap, Swiper, GLightbox, AOS
+│   └── vendor/
 ├── manage.py
 ├── requirements.txt
 ├── README.md
@@ -74,7 +71,7 @@ STATIC/
 
 ---
 
-## 🚀 Quickstart Guide
+## Setup Instructions
 
 ### 1. Clone the Repository
 ```bash
@@ -102,13 +99,13 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Visit **http://127.0.0.1:8000/** in your browser.
+Open http://127.0.0.1:8000/ in your browser.
 
 ---
 
-## 🛠️ Customizations Done
-- **Zero Placeholder / Latin Text:** Every single instance of *Lorem Ipsum* replaced with realistic Kenyan tech agency copy.
-- **Removed Third-Party Branding:** All *“Designed by BootstrapMade”* and third-party markers removed.
-- **Localized Content:** Pricing in Kenya Shillings (KSh), addresses in Westlands, Nairobi, Kenyan phone format (`+254`), and Daraja M-Pesa case studies.
-- **Jinja / Django Templating:** Master `base.html` inheritance, modular `includes/navbar.html` and `includes/footer.html`, CSRF tokens, and dynamic routing.
-- **Database Models:** Fully functional models for `ContactMessage` and `NewsletterSubscriber` with Django Admin integration.
+## Features
+- Clean Python and Django 6 architecture with template inheritance
+- Modular navbar and footer components
+- Contact message and newsletter subscription models with Django Admin support
+- M-Pesa Daraja payment integration structure and practical documentation
+- Fully responsive across mobile, tablet, and desktop viewports
